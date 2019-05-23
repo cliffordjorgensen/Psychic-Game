@@ -1,12 +1,24 @@
 
 var chances = 4;
 var win = 0;
-var button = [];
+var alpha = [];
 for (var i = 65; i <= 90; i++) {
     res = String.fromCharCode(i);
-    button.push(res);
+    alpha.push(res);
 }
-console.log(button);
+console.log(alpha);
+
+randNum = () => {
+    var genRand = Math.floor(Math.random() * 90) + 65
+    return genRand
+
+}
+
+var compRand = String.fromCharCode(randNum())
+console.log(compRand)
+
+
+
 
 
 
