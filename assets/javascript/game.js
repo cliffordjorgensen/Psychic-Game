@@ -1,8 +1,9 @@
 ///Cliff Jorgensen///
-randNum = () => {
-    var genRand = Math.floor(Math.random() * 97) + 23
-    return genRand;
+
+randNum = function randomIntFromInterval(min = 97, max = 123) {
+    return Math.floor(Math.random() * (max - min) + min);
 }
+console.log(randNum())
 var wins = 0;
 var losses = 0;
 var geussCount = 0;
@@ -14,9 +15,11 @@ var winsText = document.getElementById("wins-text");
 var lossesText = document.getElementById("losses-text");
 var geussCountText = document.getElementById("geussCount-text");
 document.onkeyup = function (event) {
+    //  debugger
     var userGuess = event.key;
     for (i = 0; i < 10; i++) {
         var computerChoices = String.fromCharCode(randNum())
+        console.log(computerChoices)
     }
     if (userGuess === computerChoices) {
         wins++;
